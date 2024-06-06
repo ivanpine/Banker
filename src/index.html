@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Banker</title>
+</head>
+<body>
+    <nav>
+        <p class="welcome">Welcome back, <span></span></p>
+        <img src="/img/logo.png" alt="Logo">
+        <p class="logout">You will be logged out in <span></span></p>
+    </nav>
+
+    <section>
+        <div class="login">
+            <img src="/img/logo.png" class="logo-login" alt="Logo">
+            <h2 class="title">Banker</h2>
+            <form class="form-login">
+                <input type="text" placeholder="username" class=" login_input input-user" maxlength="18">
+                <img src="/img/user.png" class="icons icon-user">
+                <input type="password" placeholder="password" class="login_input input-password" maxlength="25">
+                <img src="/img/padlock.png" class="icons icon-pass">
+                <p class="incorrect">Incorrect credentials!</p>
+                <button type="submit" class="btn-login">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <main class="app">    
+        <div class="balance">
+            <div>
+                <p class="balance__label">Current balance</p>
+                <p class="balance__date">As of <span>01/12/2025 05:28</span></p>
+            </div>
+            <h1 class="balance__value">12.520,72 €</h1>
+        </div>
+
+        <div class="movements">
+            <div class="movements-row">
+                <div class="movements__type movements__type--deposit">3 deposit</div>
+                <div class="movements__date">12/05/2002</div>
+                <div class="movements__value">555,00 €</div>
+            </div>
+
+            <div class="movements-row">
+                <div class="movements__type movements__type--withdraw">2 withdraw</div>
+                <div class="movements__date">12/05/2002</div>
+                <div class="movements__value">2.000,00 €</div>
+            </div>
+
+            <div class="movements-row">
+                <div class="movements__type movements__type--deposit">1 deposit</div>
+                <div class="movements__date">12/05/2002</div>
+                <div class="movements__value">-6.000,00 €</div>
+            </div>
+        </div>
+
+        <div class="operations op-transfer">
+            <h2>Transfer Money</h2>
+            <form class="form form-transfer">
+                <input type="text" class="form-transfer__to" maxlength="18">
+                <input type="number" min="1" class="form-transfer__amount">
+                <button class="btn-form btn-transfer">&rarr;</button>
+                <label class="form__label">Transfer to</label>
+                <label class="form__label">Amount</label>
+            </form>
+        </div>
+
+        <div class="operations op-request">
+            <h2>Request Loan</h2>
+            <form class="form form-request">
+                <input type="number" class="form-request__amount" min="1">
+                <button class="btn-form btn-request">&rarr;</button>
+                <label class="form__label">Amount</label>
+            </form>
+        </div>
+
+        <div class="operations op-switch">
+            <h2>Switch account</h2>
+            <form class="form form-switch">
+                <input type="text" class="form-switch__user" maxlength="18">
+                <input type="password" class="form-switch__pass" maxlength="25">
+                <button class="btn-form btn-switch">&rarr;</button>
+                <label class="form__label">Confirm username</label>
+                <label class="form__label">Confirm password</label>
+            </form>
+        </div>
+        
+        <div class="summary">
+            <p class="summary__label">In</p>
+            <p class="summary__value summary--in">0000 €</p>
+            <p class="summary__label">Out</p>
+            <p class="summary__value summary--out">0000 €</p>
+            <p class="summary__label">Interest</p>
+            <p class="summary__value summary--int">0000 €</p>
+            <button class="btn-sort">&downarrow; Sort</button>
+        </div>
+    </main>
+    
+    <script src="/src/script.js" type="module"></script>
+</body>
+</html>
