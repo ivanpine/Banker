@@ -1,8 +1,8 @@
 const account1 = {
     owner: 'Ivan Pinevski',
     movements: [18000, -5000, 25, -12.63, 220, -150, -500],
-    username: 'ip',
-    password: '1111',
+    username: '',
+    password: '',
     interestRate: 1.2,
 
     movementsDates: [
